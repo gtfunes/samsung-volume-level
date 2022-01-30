@@ -2,13 +2,9 @@ import config from 'dos-config';
 import {logger} from 'appium-support';
 
 import CoolFace from 'cool-ascii-faces';
-import {SamsungTV} from 'samsungtv';
+import {SamsungTV, KEY_CODES} from 'samsungtv';
 import {SpeechRecorder} from 'speech-recorder';
 import times from 'lodash.times';
-
-// TV keys
-const TV_VOLUME_UP_KEY = 'KEY_VOLUP';
-const TV_VOLUME_DOWN_KEY = 'KEY_VOLDOWN';
 
 // Exit function that also does some cleanup
 const exit = (reason = 'Exiting...', code = 0) => {
@@ -100,7 +96,7 @@ const main = async () => {
           log.info('Too loud!');
 
           times(config.remote.volumeDownTimes, () =>
-            tv.sendKey(TV_VOLUME_DOWN_KEY),
+            tv.sendKey(KEY_CODES.KEY_VOLDOWN),
           );
           consecutiveLoudNoiseCount = 0;
         } else if (
@@ -112,7 +108,7 @@ const main = async () => {
           log.info('Too quiet!');
 
           times(config.remote.volumeUpTimes, () =>
-            tv.sendKey(TV_VOLUME_UP_KEY),
+            tv.sendKey(KEY_CODES.KEY_VOLUP),
           );
           consecutiveQuietNoiseCount = 0;
         }
