@@ -1,0 +1,43 @@
+{
+  "extends": ["airbnb-base"],
+  "rules": {
+    "no-restricted-properties": "off",
+    "complexity": ["error", 15],
+    "max-depth": ["error", 4],
+    "max-nested-callbacks": ["error", 3],
+    "max-params": ["error", 6],
+    "max-statements": ["error", 25],
+    "no-use-before-define": "off",
+    "no-constant-condition": "off",
+    "no-plusplus": "off",
+    "object-curly-spacing": "off",
+    "object-property-newline": [
+      "error",
+      {
+        "allowAllPropertiesOnSameLine": false
+      }
+    ],
+    "no-warning-comments": "off",
+    "no-nested-ternary": "off",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"],
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error"],
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "always-multiline"
+      }
+    ],
+    "no-restricted-globals": "off",
+    "operator-linebreak": ["error", "after"],
+    "import/no-named-as-default": "off",
+    "import/no-cycle": "off",
+    "import/prefer-default-export": "off",
+    "import/extensions": "off"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "appName": "SamsungRemote",
+  "tv": {
+    "ip": "192.168.1.100",
+    "mac": "AA:AA:AA:AA:AA:AA"
+  },
+  "audio": {
+    "deviceId": -1
+  },
+  "volume": {
+    "max": 400,
+    "min": 100,
+    "consecutiveLoudLimit": 20,
+    "consecutiveQuietLimit": 20,
+    "consecutiveSilenceLimit": 500
+  },
+  "remote": {
+    "volumeDownTimes": 2,
+    "volumeUpTimes": 2
+  }
+}
