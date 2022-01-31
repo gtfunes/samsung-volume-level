@@ -19,7 +19,8 @@
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx|json|yml|yaml|ts|tsx|md|mdx)\"",
     "pre-commit": "lint-staged",
     "prepare": "husky install",
-    "start": "npm run build && node -r esm ./dist/index.js"
+    "start": "npm run build && node -r esm ./dist/index.js",
+    "start:remote": "npm run build && node -r esm ./dist/remote.js"
   },
   "dependencies": {
     "appium-support": "2.55.0",
