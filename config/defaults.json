@@ -1,5 +1,5 @@
 {
-  "appName": "SamsungRemote",
+  "appName": "AutoVolumeJS",
   "tv": {
     "ip": "192.168.1.100",
     "mac": "AA:AA:AA:AA:AA:AA"
@@ -8,11 +8,11 @@
     "deviceId": -1
   },
   "volume": {
-    "max": 400,
-    "min": 100,
+    "max": 200,
+    "min": 50,
     "consecutiveLoudLimit": 20,
     "consecutiveQuietLimit": 20,
-    "consecutiveSilenceLimit": 500
+    "consecutiveSilenceLimit": 600
   },
   "remote": {
     "volumeDownTimes": 2,
