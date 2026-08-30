@@ -1,9 +1,10 @@
 import config from 'dos-config';
-import {logger} from 'appium-support';
 
 import CoolFace from 'cool-ascii-faces';
 import {SamsungTV, KEY_CODES} from 'samsungtv';
 import times from 'lodash.times';
+
+import {getLogger} from './logger';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const {SpeechRecorder} = require('speech-recorder');
@@ -39,7 +40,7 @@ const errorHandler = (error: unknown) => {
 };
 
 // Logger object
-const log = logger.getLogger(config.appName);
+const log = getLogger(config.appName);
 // TV object
 const tv = new SamsungTV(config.tv.ip, config.tv.mac);
 
