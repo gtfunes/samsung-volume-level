@@ -2,10 +2,11 @@ import {stdin} from 'process';
 import {on} from 'events';
 
 import config from 'dos-config';
-import {logger} from 'appium-support';
 
 import CoolFace from 'cool-ascii-faces';
 import {SamsungTV, KEY_CODES} from 'samsungtv';
+
+import {getLogger} from './logger';
 
 const COMMAND_KEYS = {
   QUIT: '\u0003',
@@ -18,7 +19,7 @@ const COMMAND_KEYS = {
 };
 
 // Logger object
-const log = logger.getLogger(config.appName);
+const log = getLogger(config.appName);
 // TV object
 const tv = new SamsungTV(config.tv.ip, config.tv.mac);
 
